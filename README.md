@@ -1,73 +1,65 @@
-# Welcome to your Lovable project
+# 🌟 Reformat Genius - أداة إعادة تنسيق النصوص الذكية
 
-## Project info
+## الوصف العام
 
-**URL**: https://lovable.dev/projects/2f504839-7a9d-416d-8c99-7b3ebc88bf8e
+**Reformat Genius** هو تطبيق ويب متقدم مصمم لمساعدة المستخدمين على معالجة وإعادة تنسيق وهيكلة البيانات النصية والبرمجية بسرعة وكفاءة. سواء كنت تحتاج إلى تنظيف بيانات CSV، تحويل صيغ JSON، أو تنسيق شيفرة برمجية، يوفر هذا التطبيق واجهة مستخدم نظيفة وأدوات قوية لإنجاز المهمة.
 
-## How can I edit this code?
+## 🚀 التقنيات المستخدمة (Technology Stack)
 
-There are several ways of editing your application.
+يتم بناء هذا المشروع على أحدث التقنيات لضمان أفضل أداء وقابلية للتوسع:
 
-**Use Lovable**
+* **الواجهة الأمامية (Frontend):**
+    * **React + TypeScript:** مكتبة قوية لبناء واجهات المستخدم مع ضمان سلامة الأنواع (Type Safety).
+    * **Vite:** أداة بناء سريعة (Build Tool) لتجربة تطوير ممتازة.
+    * **Tailwind CSS & shadcn-ui:** نظام تصميم قائم على المكونات يضمن واجهة مستخدم عصرية ومتجاوبة (Responsive).
+* **الواجهة الخلفية وقاعدة البيانات (Backend/DB):**
+    * **Supabase (محتمل):** يُستخدم كخلفية سريعة لخدمات قواعد البيانات والمصادقة (Authentication).
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2f504839-7a9d-416d-8c99-7b3ebc88bf8e) and start prompting.
+## ⚙️ دليل التشغيل المحلي (Local Setup)
 
-Changes made via Lovable will be committed automatically to this repo.
+للبدء في تطوير المشروع على جهازك المحلي، اتبع الخطوات التالية:
 
-**Use your preferred IDE**
+**المتطلبات:** يجب توفر Node.js (يُفضل استخدام أحدث إصدار LTS) و npm.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1.  **استنساخ المستودع (Clone the Repository):**
+    ```bash
+    git clone [https://github.com/kinan471/reformat-genius.git](https://github.com/kinan471/reformat-genius.git)
+    cd reformat-genius
+    ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2.  **تثبيت التبعيات (Install Dependencies):**
+    ```bash
+    npm install
+    ```
 
-Follow these steps:
+3.  **إعداد متغيرات البيئة (Environment Variables):**
+    قم بإنشاء ملف باسم `.env.local` في جذر المشروع واملأه بمتغيرات Supabase (إذا كنت تستخدمها):
+    ```
+    VITE_SUPABASE_URL=YOUR_SUPABASE_PROJECT_URL
+    VITE_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_PUBLIC_KEY
+    ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+4.  **تشغيل خادم التطوير (Run Development Server):**
+    ```bash
+    npm run dev
+    ```
+    سيتم تشغيل التطبيق محلياً (عادةً على http://localhost:5173).
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 💡 خارطة الطريق واقتراحات التطوير المستقبلية
 
-# Step 3: Install the necessary dependencies.
-npm i
+لتقوية المشروع ودفعه نحو مرحلة الإنتاج، يُقترح التركيز على المجالات التالية:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### أ. تقوية مناطق الضعف الحالية
 
-**Edit a file directly in GitHub**
+| المجال | الاقتراح | التنفيذ الأولي |
+| :--- | :--- | :--- |
+| **التوثيق** | توثيق وظائف الوحدات الرئيسية (Core Logic) ووصف الميزات في هذا الملف. | تم تحديث README.md |
+| **استقرار الحزم** | توحيد مدير الحزم على `npm` لضمان التناسق. | تم التعديل في `package.json` |
+| **جودة الشيفرة** | تطبيق إطار اختبار (Testing Framework) لضمان ثبات منطق إعادة التنسيق. | تم إضافة Vitest في `package.json` |
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### ب. ميزات وتطويرات مقترحة
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/2f504839-7a9d-416d-8c99-7b3ebc88bf8e) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1.  **منطق اختبار شامل (Comprehensive Testing):** كتابة اختبارات وحدة (Unit Tests) واختبارات تكامل (Integration Tests) باستخدام **Vitest** للتأكد من أن جميع خوارزميات إعادة التنسيق (Reformatting Algorithms) تعمل بشكل صحيح في جميع السيناريوهات.
+2.  **أتمتة البناء والنشر (CI/CD):** إعداد مسار عمل (Workflow) باستخدام **GitHub Actions** لتشغيل الاختبارات تلقائياً ونشر التطبيق عند كل دمج. **(تم توفير ملف تهيئة مبدئي)**.
+3.  **إدارة الأداء:** استخدام أداة تحليل أداء React (مثل React Profiler) لتحسين المكونات التي تتعامل مع المدخلات النصية الكبيرة لضمان سرعة معالجة عالية.
+4.  **المرونة في الدفع (Payment Flexibility):** بما أنك تخطط لتغيير بوابة الدفع، يجب تصميم واجهة "طبقة الخدمة" (Service Layer Interface) للدفع بحيث يسهل تبديل مقدم الخدمة (Stripe, PayPal, إلخ) دون تغيير منطق التطبيق الرئيسي.
