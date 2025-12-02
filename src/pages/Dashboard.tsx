@@ -108,6 +108,25 @@ const Dashboard = () => {
     setResults(item.output_data);
   };
 
+  const handleDeleteHistory = async (id: string) => {
+    const { error } = await supabase
+      .from("generations")
+      .delete()
+      .eq("id", id);
+
+    if (error) {
+      toast({
+        title: "Error",
+        description: "Failed to delete item",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setHistory((prev) => prev.filter((item) => item.id !== id));
+    toast({ title: "Deleted", description: "History item removed" });
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <DashboardHeader />
@@ -116,7 +135,11 @@ const Dashboard = () => {
         <div className="grid lg:grid-cols-4 gap-6">
           {/* History Sidebar */}
           <div className="lg:col-span-1">
-            <GenerationHistory history={history} onLoad={handleLoadHistory} />
+            <GenerationHistory 
+              history={history} 
+              onLoad={handleLoadHistory} 
+              onDelete={handleDeleteHistory}
+            />
           </div>
 
           {/* Main Content */}
