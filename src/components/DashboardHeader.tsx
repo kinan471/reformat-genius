@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useAuth } from "@/contexts/AuthContext";
-import { LogOut, Crown } from "lucide-react";
+import { LogOut, Crown, Settings } from "lucide-react";
+import { Link } from "react-router-dom";
+import { PaddleCheckout } from "@/components/PaddleCheckout";
 
 export const DashboardHeader = () => {
   const { signOut, profile } = useAuth();
@@ -27,18 +29,15 @@ export const DashboardHeader = () => {
               <span className="text-sm text-muted-foreground">
                 {profile?.trial_generations_used || 0}/1 free generations used
               </span>
-              <a 
-                href="https://store.lemonsqueezy.com/checkout/buy/placeholder" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Button size="sm" className="bg-gradient-hero">
-                  <Crown className="h-4 w-4 mr-1" />
-                  Upgrade to Pro
-                </Button>
-              </a>
+              <PaddleCheckout size="sm" className="bg-gradient-hero" />
             </div>
           )}
+          
+          <Link to="/settings">
+            <Button variant="ghost" size="sm">
+              <Settings className="h-4 w-4" />
+            </Button>
+          </Link>
           
           <Button variant="ghost" size="sm" onClick={signOut}>
             <LogOut className="h-4 w-4 mr-2" />

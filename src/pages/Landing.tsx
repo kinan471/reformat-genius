@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Video, MessageSquare, Globe, Check, ArrowRight } from "lucide-react";
+import { PaddleCheckout } from "@/components/PaddleCheckout";
 
 const Landing = () => {
   return (
@@ -148,13 +149,9 @@ const Landing = () => {
                   <span>Full history access</span>
                 </div>
               </div>
-              <a 
-                href="https://store.lemonsqueezy.com/checkout/buy/placeholder" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Button className="w-full bg-gradient-hero">Subscribe Now</Button>
-              </a>
+              <PaddleCheckout className="w-full bg-gradient-hero">
+                Subscribe Now
+              </PaddleCheckout>
             </CardContent>
           </Card>
         </div>
