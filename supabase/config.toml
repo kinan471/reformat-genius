@@ -1,7 +1,7 @@
 project_id = "lxlmhbnmdxghdpcmfeow"
 
 [functions.repurpose-content]
-verify_jwt = false
+verify_jwt = true
 
 [functions.paddle-webhook]
 verify_jwt = false
