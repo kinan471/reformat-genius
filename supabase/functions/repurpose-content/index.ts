@@ -31,7 +31,7 @@ CRITICAL RULES:
 - Return ONLY valid JSON
 - Base everything on the provided content
 - Use ${tone} tone
-- Language: ${language}
+- IMPORTANT: Detect the input language and generate ALL outputs in the SAME language as the input. If the input is in Arabic, all outputs must be in Arabic. If the input is in English, all outputs must be in English. This applies to ALL fields including hooks, headlines, posts, scripts, hashtags, and CTAs.
 - Never invent facts not in the content`;
 
     const userPrompt = `Transform this content into the specified formats:
